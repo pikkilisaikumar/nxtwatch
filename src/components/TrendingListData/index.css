@@ -1,0 +1,69 @@
+.thumnail-image-url {
+  height: 180px;
+  width: 260px;
+}
+.channellogo-profile {
+  height: 40px;
+  width: 40px;
+  border-radius: 20px;
+}
+.channel-details-container-content {
+  display: flex;
+  justify-content: space-between;
+}
+.view-publishedcontainer {
+  display: flex;
+  /* align-items: center; */
+}
+.titleparagraph {
+  font-family: Roboto;
+  color: #ebebeb;
+  font-size: 13px;
+  text-decoration: none;
+}
+
+.titleparagraph1 {
+  font-family: Roboto;
+  font-size: 13px;
+  text-decoration: none;
+}
+
+.videoscontainer-one {
+  width: 300px;
+  min-height: 400px;
+  padding: 10px;
+  /* background-color: white; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.link-item-home-data {
+  /* outline: none; */
+  text-decoration: none;
+  box-shadow: none;
+  color: black;
+}
+.thumnailstyling {
+  height: 200px;
+}
+.thumnail-trending-videos-container-list {
+  display: flex;
+}
+.views-publishedcontainer {
+  display: flex;
+  align-items: center;
+}
+.title-paragraph {
+  color: white;
+  font-family: Roboto;
+}
+.linkitem-one {
+  text-decoration: None;
+  outline: none;
+  color: black;
+}
+.linkitem-one1 {
+  text-decoration: None;
+  outline: none;
+  color: white;
+}

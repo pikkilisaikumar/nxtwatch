@@ -1,0 +1,53 @@
+.background-details-one {
+  background-color: lightblue;
+  min-height: 100vh;
+  padding: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.checkboxstyling {
+  margin-top: 6px;
+}
+
+.show-password-paragraph {
+  font-family: Roboto;
+  /* padding-top: 6px; */
+  padding-left: 10px;
+}
+
+.checkboxshowpassword {
+  display: flex;
+  flex-direction: row;
+  /* align-items: center; */
+}
+
+.erromsg-data-styling {
+  color: red;
+  font-family: Roboto;
+}
+
+.white-container-card {
+  background-color: white;
+  min-height: 250px;
+  width: 400px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.lighthemeimageone {
+  height: 80px;
+  width: 200px;
+}
+
+.loginbuttonstyling {
+  color: #ffffff;
+  background-color: blue;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  border-width: 0px;
+}

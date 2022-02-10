@@ -1,0 +1,26 @@
+.thumnail-video-url {
+  width: 250px;
+}
+.titleparagraphgaming {
+  font-family: Roboto;
+  font-size: 15px;
+  color: black;
+}
+.titleparagraphgaming1 {
+  font-family: Roboto;
+  color: white;
+  font-size: 15px;
+}
+.list-items-onegaming {
+  text-decoration: none;
+  outline: none;
+  color: black;
+  text-align: center;
+}
+
+.list-items-onegaming1 {
+  text-decoration: none;
+  outline: none;
+  color: white;
+  text-align: center;
+}
