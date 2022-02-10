@@ -38,6 +38,7 @@ const apiStatusChange3 = {
 class VideoItemDetails extends Component {
   state = {
     particularVideo: {},
+
     apiStatus3: apiStatusChange3.intial,
     isActiveLike: true,
     isDisLike: true,
@@ -115,7 +116,6 @@ class VideoItemDetails extends Component {
       const overallvideodata = {
         ...particularVideo,
         channel: channeldataone,
-        isTrue: true,
       }
       //   console.log(overallvideodata)
       this.setState({
@@ -135,12 +135,23 @@ class VideoItemDetails extends Component {
     return (
       <ThemeContext.Consumer>
         {value => {
-          const {isTheme, addSavedItem, isSaved} = value
+          const {isTheme, addSavedItem, overallSaveItem} = value
 
           let videosData3
 
           if (apiStatus3 === apiStatusChange3.success) {
             const {particularVideo} = this.state
+            const {id} = particularVideo
+            let isSaveOne
+            const savedDataone = overallSaveItem.find(
+              eachsaveItem => eachsaveItem === id,
+            )
+            if (savedDataone === undefined) {
+              isSaveOne = true
+            } else {
+              isSaveOne = false
+            }
+
             const saveButtonone = () => {
               addSavedItem({...particularVideo})
             }
@@ -230,12 +241,12 @@ class VideoItemDetails extends Component {
                         </button>
                       </div>
                       <div className="mr-3 icons-container-one">
-                        {isSaved ? (
+                        {isSaveOne ? (
                           <BiListPlus className="mt-1 saveicon" />
                         ) : (
                           <BiListPlus className="mt-1 saveicon1" />
                         )}
-                        {isSaved ? (
+                        {isSaveOne ? (
                           <button
                             type="button"
                             className="save-button"
@@ -345,7 +356,7 @@ class VideoItemDetails extends Component {
           }
 
           return (
-            <div data-testid="videoItemDetails" className="banner-one">
+            <div className="banner-one">
               <Header />
 
               <div className="home-container-one" data-testid="trending">
@@ -471,7 +482,7 @@ class VideoItemDetails extends Component {
 
                 <VideoItemDetailsContainer
                   data-testid="videoItemDetails"
-                  bgColorvideoItem={isTheme ? '#f9f9f9' : '#181818'}
+                  bgColorVideoItem={isTheme}
                 >
                   {videosData3}
                 </VideoItemDetailsContainer>

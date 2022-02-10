@@ -5,6 +5,7 @@ const ThemeContext = React.createContext({
   changeTheme: () => {},
   isSaved: true,
   savedItem: [],
+  overallSaveItem: [],
   addSavedItem: () => {},
   deleteItem: () => {},
 })

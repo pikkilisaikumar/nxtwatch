@@ -211,7 +211,7 @@ class Home extends Component {
           }
 
           return (
-            <div data-testid="banner" className="banner-one">
+            <div className="banner-one">
               <Header />
               <div className="home-container-one">
                 <div

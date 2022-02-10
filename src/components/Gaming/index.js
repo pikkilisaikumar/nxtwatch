@@ -267,10 +267,7 @@ class Gaming extends Component {
                   </div>
                 </div>
 
-                <GamingContainer
-                  data-testid="gaming"
-                  bgColordark={isTheme ? '#f9f9f9' : '#181818'}
-                >
+                <GamingContainer data-testid="gaming" bgColorGaming={isTheme}>
                   <div
                     className={
                       isTheme ? 'trending-container' : 'trending-container1'

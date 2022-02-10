@@ -191,7 +191,7 @@ class SavedVideos extends Component {
 
                 <SavedVideoContainer
                   data-testid="savedVideos"
-                  bgColorstyled={isTheme ? '#f9f9f9' : '#181818'}
+                  bgColorSaved={isTheme}
                 >
                   <div
                     className={

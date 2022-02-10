@@ -13,7 +13,7 @@ import ThemeContext from './context/NxtWatch'
 import './App.css'
 
 class App extends Component {
-  state = {isTheme: true, savedItem: [], isSaved: true}
+  state = {isTheme: true, savedItem: [], overallSaveItem: []}
 
   changeTheme = () => {
     this.setState(prevState => ({
@@ -22,26 +22,29 @@ class App extends Component {
   }
 
   addSavedItem = data => {
-    const {savedItem, isSaved} = this.state
+    const {savedItem, overallSaveItem} = this.state
 
     const dataispresentornot = savedItem.find(each => each.id === data.id)
 
     if (dataispresentornot === undefined) {
       this.setState(prevState => ({
         savedItem: [...prevState.savedItem, data],
-        isSaved: !prevState.isSaved,
+        overallSaveItem: [...prevState.overallSaveItem, data.id],
       }))
     } else {
       const remaingdata = savedItem.filter(eachone => eachone.id !== data.id)
+      const overallremaingdata = overallSaveItem.filter(
+        eachsave => eachsave !== data.id,
+      )
       this.setState({
         savedItem: remaingdata,
-        isSaved: !isSaved,
+        overallSaveItem: overallremaingdata,
       })
     }
   }
 
   render() {
-    const {isTheme, savedItem, isSaved} = this.state
+    const {isTheme, savedItem, overallSaveItem} = this.state
     return (
       <ThemeContext.Provider
         value={{
@@ -49,7 +52,7 @@ class App extends Component {
           changeTheme: this.changeTheme,
           savedItem,
           addSavedItem: this.addSavedItem,
-          isSaved,
+          overallSaveItem,
         }}
       >
         <Switch>

@@ -278,7 +278,7 @@ class Trending extends Component {
 
                 <TrendingContainer
                   data-testid="trending"
-                  bgColortrending={isTheme ? '#f9f9f9' : '#181818'}
+                  trendingvalue={isTheme}
                 >
                   <div
                     className={
