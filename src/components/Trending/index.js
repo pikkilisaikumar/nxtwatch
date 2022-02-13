@@ -18,7 +18,7 @@ import ThemeContext from '../../context/NxtWatch'
 
 import Header from '../Header'
 
-import TrendingContainer from './styledComponent'
+import {TrendingContainer, TrendingOne} from './styledComponent'
 
 import TrendingListData from '../TrendingListData'
 
@@ -277,14 +277,10 @@ class Trending extends Component {
                 </div>
 
                 <TrendingContainer
-                  data-testid="trending"
+                  data_testid="trending"
                   trendingvalue={isTheme}
                 >
-                  <div
-                    className={
-                      isTheme ? 'trending-container' : 'trending-container1'
-                    }
-                  >
+                  <TrendingOne trendingnumber={isTheme}>
                     <FaFire className="fafire-styling" />
                     <h1
                       className={
@@ -295,7 +291,7 @@ class Trending extends Component {
                     >
                       Trending
                     </h1>
-                  </div>
+                  </TrendingOne>
                   {videosData1}
                 </TrendingContainer>
               </div>

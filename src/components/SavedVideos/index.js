@@ -76,7 +76,7 @@ class SavedVideos extends Component {
                 >
                   <ul>
                     <Link to="/">
-                      <div
+                      <li
                         className={
                           isTheme
                             ? 'icon-content-container'
@@ -93,10 +93,10 @@ class SavedVideos extends Component {
                         >
                           Home
                         </p>
-                      </div>
+                      </li>
                     </Link>
                     <Link to="/trending">
-                      <div
+                      <li
                         className={
                           isTheme
                             ? 'icon-content-container'
@@ -113,10 +113,10 @@ class SavedVideos extends Component {
                         >
                           Trending
                         </p>
-                      </div>
+                      </li>
                     </Link>
                     <Link to="/gaming">
-                      <div
+                      <li
                         className={
                           isTheme
                             ? 'icon-content-container'
@@ -133,10 +133,10 @@ class SavedVideos extends Component {
                         >
                           Gaming
                         </p>
-                      </div>
+                      </li>
                     </Link>
                     <Link to="/saved-videos">
-                      <div
+                      <li
                         className={
                           isTheme
                             ? 'icon-content-container'
@@ -153,7 +153,7 @@ class SavedVideos extends Component {
                         >
                           Saved videos
                         </p>
-                      </div>
+                      </li>
                     </Link>
                   </ul>
                   <div>

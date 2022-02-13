@@ -20,7 +20,7 @@ import {BiListPlus} from 'react-icons/bi'
 import {AiOutlineHome, AiOutlineLike, AiOutlineDislike} from 'react-icons/ai'
 import {SiYoutubegaming} from 'react-icons/si'
 
-import VideoItemDetailsContainer from './styledComponent'
+import {VideoItemDetailsContainer, LikeButton} from './styledComponent'
 
 import ThemeContext from '../../context/NxtWatch'
 
@@ -38,7 +38,6 @@ const apiStatusChange3 = {
 class VideoItemDetails extends Component {
   state = {
     particularVideo: {},
-
     apiStatus3: apiStatusChange3.intial,
     isActiveLike: true,
     isDisLike: true,
@@ -218,13 +217,14 @@ class VideoItemDetails extends Component {
                             isActiveLike ? 'Likebtn mt-1' : 'Likebtn1 mt-1'
                           }
                         />
-                        <button
+                        <LikeButton
                           type="button"
-                          className={isActiveLike ? 'Likebtn' : 'Likebtn1'}
+                          className="mt-1"
+                          colorStyling={isActiveLike ? '#64748b' : '#2563eb'}
                           onClick={this.onLikeHandleClick}
                         >
                           Like
-                        </button>
+                        </LikeButton>
                       </div>
                       <div className="mr-3 icons-container-one">
                         <AiOutlineDislike
@@ -232,13 +232,13 @@ class VideoItemDetails extends Component {
                             isDisLike ? 'Likebtn mt-1' : 'Likebtn1 mt-1'
                           }
                         />
-                        <button
+                        <LikeButton
                           type="button"
                           onClick={this.onDisLikeHandleClick}
-                          className={isDisLike ? 'Likebtn' : 'Likebtn1'}
+                          colorStyling={isDisLike ? '#64748b' : '#2563eb'}
                         >
                           Dislike
-                        </button>
+                        </LikeButton>
                       </div>
                       <div className="mr-3 icons-container-one">
                         {isSaveOne ? (

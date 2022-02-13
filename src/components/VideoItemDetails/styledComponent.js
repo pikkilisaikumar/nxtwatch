@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-const VideoItemDetailsContainer = styled.div`
+export const VideoItemDetailsContainer = styled.div`
   flex-grow: 1;
   height: 100vh;
   overflow: auto;
@@ -8,4 +8,8 @@ const VideoItemDetailsContainer = styled.div`
     props.bgColorVideoItem ? '#f9f9f9' : '#181818'};
 `
 
-export default VideoItemDetailsContainer
+export const LikeButton = styled.button`
+  color: ${props => props.colorStyling};
+  background-color: transparent;
+  border-width: 0px;
+`

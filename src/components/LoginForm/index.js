@@ -4,6 +4,8 @@ import {Redirect} from 'react-router-dom'
 
 import Cookies from 'js-cookie'
 
+import ButtonLogin from './styledComponent'
+
 import './index.css'
 
 class LoginForm extends Component {
@@ -53,9 +55,10 @@ class LoginForm extends Component {
     }
     const response = await fetch(apiUrl, requestmethod)
     const jsonData = await response.json()
+    console.log(jsonData)
     if (response.ok === true) {
       this.requestSuccess(jsonData.jwt_token)
-    } else if (response.status === 400) {
+    } else {
       this.requestfailure(jsonData.error_msg)
     }
   }
@@ -120,9 +123,7 @@ class LoginForm extends Component {
               </label>
             </div>
 
-            <button type="submit" className="loginbuttonstyling">
-              Login
-            </button>
+            <ButtonLogin type="submit">Login</ButtonLogin>
             {isTrue && <p className="erromsg-data-styling">*{errorMsgData}</p>}
           </form>
         </div>
